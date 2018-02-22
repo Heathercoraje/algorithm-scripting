@@ -1,0 +1,25 @@
+{
+  "name": "algorithm-scripting",
+  "version": "1.0.0",
+  "description": "pure functions and testing with Mocha",
+  "main": "telephoneCheck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heathercoraje/algorithm-scripting.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "heathercoraje",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heathercoraje/algorithm-scripting/issues"
+  },
+  "homepage": "https://github.com/Heathercoraje/algorithm-scripting#readme",
+  "devDependencies": {
+    "mocha": "^5.0.1"
+  }
+}
