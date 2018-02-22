@@ -1,0 +1,22 @@
+{
+  "name": "algorithm-scripting",
+  "version": "1.0.0",
+  "description": "Interesting algorithm scripting from fcc, codeWar, codeRank",
+  "main": "recordCollection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heathercoraje/algorithm-scripting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heathercoraje/algorithm-scripting/issues"
+  },
+  "homepage": "https://github.com/Heathercoraje/algorithm-scripting#readme",
+  "devDependencies": {
+    "mocha": "^5.0.1"
+  }
+}
