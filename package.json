@@ -4,15 +4,13 @@
   "description": "pure functions and testing with Mocha",
   "main": "telephoneCheck.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Heathercoraje/algorithm-scripting.git"
   },
-  "keywords": [
-    "test"
-  ],
+  "keywords": ["test"],
   "author": "heathercoraje",
   "license": "ISC",
   "bugs": {

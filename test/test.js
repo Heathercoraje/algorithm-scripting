@@ -1,6 +1,7 @@
 const assert = require("assert");
 const telephoneCheck = require("../telephoneCheck");
 const updateRecords = require("../updateRecords.js");
+const sym = require("../symDifference.js");
 
 describe("Array", function() {
   describe("#indexOf()", function() {
@@ -24,6 +25,17 @@ describe("updateRecords", function() {
       assert.equal(
         updateRecords(2468, "tracks", "Oh lordy")[2468]["tracks"].length,
         3
+      );
+    });
+  });
+});
+
+describe("symDifference", function() {
+  describe("#length of array", function() {
+    it("show return 5", function() {
+      assert.equal(
+        sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]).length,
+        5
       );
     });
   });
