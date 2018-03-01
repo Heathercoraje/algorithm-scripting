@@ -9,8 +9,10 @@ function checkCashRegister(price, cash, cid) {
 
 	//calcuate total money to return string for 2 cases
 	function enoughFund(cid) {
-		var sum = cid.reduce((a, b) => a + b[1], 0);
-		return sum;
+		var sum = cid.filter((el, i) => change >= currency[i]);
+		return sum.reduce((a, b) => {
+			return a + b[1];
+		}, 0);
 	}
 
 	// first, check 2 string cases
@@ -31,7 +33,21 @@ function checkCashRegister(price, cash, cid) {
 			}
 		}
 	}
+
+	changeRecord.forEach(el => (el[1] = el[1] / 100));
 	return changeRecord;
 }
 
 module.exports = checkCashRegister;
+
+checkCashRegister(19.5, 20.0, [
+	['PENNY', 0.01],
+	['NICKEL', 0],
+	['DIME', 0],
+	['QUARTER', 0],
+	['ONE', 1.0],
+	['FIVE', 0],
+	['TEN', 0],
+	['TWENTY', 0],
+	['ONE HUNDRED', 0]
+]);
