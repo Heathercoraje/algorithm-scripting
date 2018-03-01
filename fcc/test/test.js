@@ -41,10 +41,26 @@ describe('symDifference', function() {
 		});
 	});
 });
+
+// test('deep comparison, this should pass', () => {
+// 	expect(
+// 		checkCashRegister(19.5, 20.0, [
+// 			['PENNY', 1.01],
+// 			['NICKEL', 2.05],
+// 			['DIME', 3.1],
+// 			['QUARTER', 4.25],
+// 			['ONE', 90.0],
+// 			['FIVE', 55.0],
+// 			['TEN', 20.0],
+// 			['TWENTY', 60.0],
+// 			['ONE HUNDRED', 100.0]
+// 		])
+// 	).toEqual([['QUARTER', 0.5]]);
+// });
 describe('checkCashRegister', function() {
 	describe('#return a correct change record array', function() {
 		it('should return one array', function() {
-			assert.equal(
+			assert.deepEqual(
 				checkCashRegister(19.5, 20.0, [
 					['PENNY', 1.01],
 					['NICKEL', 2.05],
