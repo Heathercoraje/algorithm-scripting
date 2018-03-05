@@ -3,6 +3,7 @@ const telephoneCheck = require('../telephoneCheck');
 const updateRecords = require('../updateRecords');
 const sym = require('../symDifference');
 const checkCashRegister = require('../checkCashRegister');
+const updateInventory = require('../updateInventory');
 
 describe('Array', function() {
 	describe('#indexOf()', function() {
@@ -41,22 +42,6 @@ describe('symDifference', function() {
 		});
 	});
 });
-
-// test('deep comparison, this should pass', () => {
-// 	expect(
-// 		checkCashRegister(19.5, 20.0, [
-// 			['PENNY', 1.01],
-// 			['NICKEL', 2.05],
-// 			['DIME', 3.1],
-// 			['QUARTER', 4.25],
-// 			['ONE', 90.0],
-// 			['FIVE', 55.0],
-// 			['TEN', 20.0],
-// 			['TWENTY', 60.0],
-// 			['ONE HUNDRED', 100.0]
-// 		])
-// 	).toEqual([['QUARTER', 0.5]]);
-// });
 describe('checkCashRegister', function() {
 	describe('#return a correct change record array', function() {
 		it('should return one array', function() {
@@ -73,6 +58,30 @@ describe('checkCashRegister', function() {
 					['ONE HUNDRED', 100.0]
 				]).length,
 				1
+			);
+		});
+	});
+});
+
+describe('updateInventory', function() {
+	describe('return a correct length of array', function() {
+		it('should return 6', function() {
+			assert.equal(
+				updateInventory(
+					[
+						[21, 'Bowling Ball'],
+						[2, 'Dirty Sock'],
+						[1, 'Hair Pin'],
+						[5, 'Microphone']
+					],
+					[
+						[2, 'Hair Pin'],
+						[3, 'Half-Eaten Apple'],
+						[67, 'Bowling Ball'],
+						[7, 'Toothpaste']
+					]
+				).length,
+				6
 			);
 		});
 	});
