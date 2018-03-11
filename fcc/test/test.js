@@ -6,6 +6,7 @@ const checkCashRegister = require('../checkCashRegister');
 const updateInventory = require('../updateInventory');
 const Person = require('../makePerson');
 const pairwise = require('../pairwise');
+const orbitalPeriod = require('../mapTheDebris');
 
 describe('Array', function() {
 	describe('#indexOf()', function() {
@@ -103,6 +104,17 @@ describe('pairwise', function() {
 	describe('returns sum of indices which have its value sumed equal to arg', function() {
 		it('should return 1', function() {
 			assert.equal(pairwise([1, 3, 2, 4], 4), 1);
+		});
+	});
+});
+
+describe('orbitalPeriod', function() {
+	describe('returns an array of object with property "orbitalPeriod"', function() {
+		it('it shoulre return [{name: "sputnik", orbitalPeriod: 86400}]', function() {
+			assert.deepEqual(
+				orbitalPeriod([{ name: 'sputnik', avgAlt: 35873.5553 }]),
+				[{ name: 'sputnik', orbitalPeriod: 86400 }]
+			);
 		});
 	});
 });
