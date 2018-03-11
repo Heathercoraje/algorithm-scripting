@@ -11,8 +11,7 @@ function orbitalPeriod(arr) {
 	}
 	return arr;
 }
-
-// test
+//
 // orbitalPeriod([
 // 	{ name: 'sputnik', avgAlt: 35873.5553 },
 // 	{ name: 'heather', avgAlt: 168 }
