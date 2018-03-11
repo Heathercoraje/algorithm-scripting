@@ -21,6 +21,6 @@ var Person = function(firstAndLast) {
 	};
 };
 // test
-// var bob = new Person('Bob Ross');
-// bob.getFullName();
+var bob = new Person('Bob Ross');
+
 module.exports = Person;

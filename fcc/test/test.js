@@ -4,6 +4,7 @@ const updateRecords = require('../updateRecords');
 const sym = require('../symDifference');
 const checkCashRegister = require('../checkCashRegister');
 const updateInventory = require('../updateInventory');
+const Person = require('../makePerson');
 
 describe('Array', function() {
 	describe('#indexOf()', function() {
@@ -83,6 +84,16 @@ describe('updateInventory', function() {
 				).length,
 				6
 			);
+		});
+	});
+});
+
+describe('Person', function() {
+	describe('return number of props inside', function() {
+		it('should return 6', function() {
+			var bob = new Person('bob ross');
+			var length = Object.keys(bob).length;
+			assert.equal(length, 6);
 		});
 	});
 });
