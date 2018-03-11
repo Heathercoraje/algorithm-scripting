@@ -5,6 +5,7 @@ const sym = require('../symDifference');
 const checkCashRegister = require('../checkCashRegister');
 const updateInventory = require('../updateInventory');
 const Person = require('../makePerson');
+const pairwise = require('../pairwise');
 
 describe('Array', function() {
 	describe('#indexOf()', function() {
@@ -94,6 +95,14 @@ describe('Person', function() {
 			var bob = new Person('bob ross');
 			var length = Object.keys(bob).length;
 			assert.equal(length, 6);
+		});
+	});
+});
+
+describe('pairwise', function() {
+	describe('returns sum of indices which have its value sumed equal to arg', function() {
+		it('should return 1', function() {
+			assert.equal(pairwise([1, 3, 2, 4], 4), 1);
 		});
 	});
 });
