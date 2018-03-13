@@ -4,6 +4,7 @@ const updateRecords = require('../updateRecords');
 const sym = require('../symDifference');
 const checkCashRegister = require('../checkCashRegister');
 const updateInventory = require('../updateInventory');
+const permAlone = require('../permAlone');
 const Person = require('../makePerson');
 const pairwise = require('../pairwise');
 const orbitalPeriod = require('../mapTheDebris');
@@ -115,6 +116,14 @@ describe('orbitalPeriod', function() {
 				orbitalPeriod([{ name: 'sputnik', avgAlt: 35873.5553 }]),
 				[{ name: 'sputnik', orbitalPeriod: 86400 }]
 			);
+		});
+	});
+});
+
+describe('permAlone', function() {
+	describe('returns a number of permutations which do not have same letter in sequence', function() {
+		it('should return 6', function() {
+			assert.equal(permAlone('abc'), 6);
 		});
 	});
 });

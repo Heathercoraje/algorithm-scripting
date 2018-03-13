@@ -24,3 +24,5 @@ function permAlone(str) {
 }
 //test
 //permAlone('abc');
+
+module.exports = permAlone;
